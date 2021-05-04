@@ -23,8 +23,7 @@ fun main() {
 
         // (5) insert multiple employees at once
         database.runQuery {
-            val employees = listOf(Employee(name = "AAA"), Employee(name = "BBB"))
-            EntityDsl.insert(e).multiple(employees)
+            EntityDsl.insert(e).multiple(Employee(name = "AAA"), Employee(name = "BBB"))
         }
 
         // (6) select all
