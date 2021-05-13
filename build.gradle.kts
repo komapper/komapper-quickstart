@@ -4,7 +4,7 @@ plugins {
     application
     idea
     kotlin("jvm") version "1.5.0"
-    id("com.google.devtools.ksp") version "1.5.0-1.0.0-alpha09"
+    id("com.google.devtools.ksp") version "1.5.0-1.0.0-alpha10"
 }
 
 val generatedSourcePath = "build/generated/ksp/main/kotlin"
@@ -37,8 +37,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.komapper:komapper-starter:0.6.1")
-    ksp("org.komapper:komapper-processor:0.6.1")
+    implementation("org.komapper:komapper-starter:0.7.0")
+    ksp("org.komapper:komapper-processor:0.7.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
 }
