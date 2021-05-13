@@ -4,7 +4,7 @@ plugins {
     application
     idea
     kotlin("jvm") version "1.5.0"
-    id("com.google.devtools.ksp") version "1.5.0-1.0.0-alpha09"
+    id("com.google.devtools.ksp") version "1.5.0-1.0.0-alpha10"
 }
 
 val generatedSourcePath = "build/generated/ksp/main/kotlin"
