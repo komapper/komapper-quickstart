@@ -37,8 +37,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.komapper:komapper-starter:0.7.0")
-    ksp("org.komapper:komapper-processor:0.7.0")
+    implementation("org.komapper:komapper-starter:0.8.0")
+    ksp("org.komapper:komapper-processor:0.8.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
 }
