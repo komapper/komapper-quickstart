@@ -14,7 +14,7 @@ fun main() {
     database.transaction {
 
         // (3) get an entity metamodel
-        val e = Employee.meta
+        val e = EmployeeDef.meta
 
         // (4) create schema
         database.runQuery {

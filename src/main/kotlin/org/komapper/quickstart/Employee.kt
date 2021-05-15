@@ -2,19 +2,26 @@ package org.komapper.quickstart
 
 import org.komapper.annotation.KmAutoIncrement
 import org.komapper.annotation.KmCreatedAt
-import org.komapper.annotation.KmEntity
+import org.komapper.annotation.KmEntityDef
 import org.komapper.annotation.KmId
 import org.komapper.annotation.KmUpdatedAt
 import org.komapper.annotation.KmVersion
 import java.time.LocalDateTime
 
-@KmEntity
 data class Employee(
-    @KmId @KmAutoIncrement val id: Int = 0,
+    val id: Int = 0,
     val name: String,
-    @KmVersion val version: Int = 0,
-    @KmCreatedAt val createdAt: LocalDateTime = LocalDateTime.MIN,
-    @KmUpdatedAt val updatedAt: LocalDateTime = LocalDateTime.MIN,
+    val version: Int = 0,
+    val createdAt: LocalDateTime = LocalDateTime.MIN,
+    val updatedAt: LocalDateTime = LocalDateTime.MIN,
+)
+
+@KmEntityDef(Employee::class)
+data class EmployeeDef(
+    @KmId @KmAutoIncrement val id: Nothing,
+    @KmVersion val version: Nothing,
+    @KmCreatedAt val createdAt: Nothing,
+    @KmUpdatedAt val updatedAt: Nothing,
 ) {
     companion object
 }
