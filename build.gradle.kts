@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     application
     idea
@@ -22,10 +20,6 @@ idea.module {
 }
 
 tasks {
-    withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = "11"
-    }
-
     withType<Test> {
         useJUnitPlatform()
     }
