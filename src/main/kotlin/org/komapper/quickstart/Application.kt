@@ -1,14 +1,13 @@
 package org.komapper.quickstart
 
-import org.komapper.core.Database
 import org.komapper.core.dsl.EntityDsl
 import org.komapper.core.dsl.SchemaDsl
-import org.komapper.core.dsl.runQuery
-import org.komapper.transaction.transaction
+import org.komapper.jdbc.Database
+import org.komapper.tx.jdbc.transaction
 
 fun main() {
     // (1) create a database instance
-    val database: Database = Database.create("jdbc:h2:mem:quickstart;DB_CLOSE_DELAY=-1")
+    val database = Database.create("jdbc:h2:mem:quickstart;DB_CLOSE_DELAY=-1")
 
     // (2) start transaction
     database.transaction {
