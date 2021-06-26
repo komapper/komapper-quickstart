@@ -2,15 +2,15 @@ package org.komapper.quickstart
 
 import org.komapper.core.dsl.EntityDsl
 import org.komapper.core.dsl.SchemaDsl
-import org.komapper.jdbc.Database
-import org.komapper.tx.jdbc.transaction
+import org.komapper.jdbc.JdbcDatabase
+import org.komapper.tx.jdbc.withTransaction
 
 fun main() {
     // (1) create a database instance
-    val database = Database.create("jdbc:h2:mem:quickstart;DB_CLOSE_DELAY=-1")
+    val database = JdbcDatabase.create("jdbc:h2:mem:quickstart;DB_CLOSE_DELAY=-1")
 
     // (2) start transaction
-    database.transaction {
+    database.withTransaction {
 
         // (3) get an entity metamodel
         val e = EmployeeDef.meta
