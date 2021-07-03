@@ -1,11 +1,11 @@
 package org.komapper.quickstart
 
-import org.komapper.annotation.KmAutoIncrement
-import org.komapper.annotation.KmCreatedAt
-import org.komapper.annotation.KmEntityDef
-import org.komapper.annotation.KmId
-import org.komapper.annotation.KmUpdatedAt
-import org.komapper.annotation.KmVersion
+import org.komapper.annotation.KomapperAutoIncrement
+import org.komapper.annotation.KomapperCreatedAt
+import org.komapper.annotation.KomapperEntityDef
+import org.komapper.annotation.KomapperId
+import org.komapper.annotation.KomapperUpdatedAt
+import org.komapper.annotation.KomapperVersion
 import java.time.LocalDateTime
 
 data class Employee(
@@ -16,12 +16,12 @@ data class Employee(
     val updatedAt: LocalDateTime = LocalDateTime.MIN,
 )
 
-@KmEntityDef(Employee::class)
+@KomapperEntityDef(Employee::class)
 data class EmployeeDef(
-    @KmId @KmAutoIncrement val id: Nothing,
-    @KmVersion val version: Nothing,
-    @KmCreatedAt val createdAt: Nothing,
-    @KmUpdatedAt val updatedAt: Nothing,
+    @KomapperId @KomapperAutoIncrement val id: Nothing,
+    @KomapperVersion val version: Nothing,
+    @KomapperCreatedAt val createdAt: Nothing,
+    @KomapperUpdatedAt val updatedAt: Nothing,
 ) {
     companion object
 }
