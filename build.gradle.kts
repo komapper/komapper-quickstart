@@ -33,6 +33,7 @@ repositories {
 dependencies {
     val komapperVersion: String by project
     implementation("org.komapper:komapper-starter-jdbc:$komapperVersion")
+    implementation("org.komapper:komapper-dialect-h2-jdbc:$komapperVersion")
     ksp("org.komapper:komapper-processor:$komapperVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
