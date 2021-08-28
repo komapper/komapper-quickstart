@@ -1,8 +1,8 @@
 plugins {
     application
     idea
-    id("com.google.devtools.ksp") version "1.5.21-1.0.0-beta07"
-    kotlin("jvm") version "1.5.21"
+    id("com.google.devtools.ksp") version "1.5.30-1.0.0-beta08"
+    kotlin("jvm") version "1.5.30"
 }
 
 val generatedSourcePath = "build/generated/ksp/main/kotlin"
@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    val komapperVersion = "0.15.2"
+    val komapperVersion = "0.16.0"
     implementation("org.komapper:komapper-starter-jdbc:$komapperVersion")
     implementation("org.komapper:komapper-dialect-h2-jdbc:$komapperVersion")
     ksp("org.komapper:komapper-processor:$komapperVersion")
