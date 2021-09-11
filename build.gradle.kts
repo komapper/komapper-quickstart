@@ -1,22 +1,13 @@
 plugins {
     application
-    idea
     id("com.google.devtools.ksp") version "1.5.30-1.0.0"
     kotlin("jvm") version "1.5.30"
 }
 
-val generatedSourcePath = "build/generated/ksp/main/kotlin"
-
-sourceSets {
-    main {
-        java {
-            srcDir(generatedSourcePath)
-        }
+kotlin {
+    sourceSets.main {
+        kotlin.srcDir("build/generated/ksp/main/kotlin")
     }
-}
-
-idea.module {
-    generatedSourceDirs.add(file(generatedSourcePath))
 }
 
 tasks {
