@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    val komapperVersion = "0.17.0"
+    val komapperVersion = "0.18.0"
     implementation("org.komapper:komapper-starter-jdbc:$komapperVersion")
     implementation("org.komapper:komapper-dialect-h2-jdbc:$komapperVersion")
     ksp("org.komapper:komapper-processor:$komapperVersion")
