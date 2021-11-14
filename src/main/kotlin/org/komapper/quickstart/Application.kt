@@ -1,6 +1,6 @@
 package org.komapper.quickstart
 
-import org.komapper.core.dsl.EntityDsl
+import org.komapper.core.dsl.QueryDsl
 import org.komapper.core.dsl.SchemaDsl
 import org.komapper.jdbc.JdbcDatabase
 import org.komapper.tx.jdbc.withTransaction
@@ -22,12 +22,12 @@ fun main() {
 
         // (5) insert multiple employees at once
         database.runQuery {
-            EntityDsl.insert(e).multiple(Employee(name = "AAA"), Employee(name = "BBB"))
+            QueryDsl.insert(e).multiple(Employee(name = "AAA"), Employee(name = "BBB"))
         }
 
         // (6) select all
         val employees = database.runQuery {
-            EntityDsl.from(e).orderBy(e.id)
+            QueryDsl.from(e).orderBy(e.id)
         }
 
         // (7) print all results
