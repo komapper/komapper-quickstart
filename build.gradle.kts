@@ -4,20 +4,8 @@ plugins {
     kotlin("jvm") version "1.5.31"
 }
 
-kotlin {
-    sourceSets.main {
-        kotlin.srcDir("build/generated/ksp/main/kotlin")
-    }
-}
-
-tasks {
-    withType<Test> {
-        useJUnitPlatform()
-    }
-}
-
-repositories {
-    mavenCentral()
+application {
+    mainClass.set("org.komapper.quickstart.ApplicationKt")
 }
 
 dependencies {
@@ -29,6 +17,18 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
-application {
-    mainClass.set("org.komapper.quickstart.ApplicationKt")
+kotlin {
+    sourceSets.main {
+        kotlin.srcDir("build/generated/ksp/main/kotlin")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks {
+    withType<Test>().configureEach {
+        useJUnitPlatform()
+    }
 }
