@@ -22,6 +22,4 @@ data class EmployeeDef(
     @KomapperVersion val version: Nothing,
     @KomapperCreatedAt val createdAt: Nothing,
     @KomapperUpdatedAt val updatedAt: Nothing,
-) {
-    companion object
-}
+)
