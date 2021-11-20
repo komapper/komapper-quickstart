@@ -1,5 +1,6 @@
 package org.komapper.quickstart
 
+import org.komapper.core.dsl.Meta
 import org.komapper.core.dsl.QueryDsl
 import org.komapper.core.dsl.SchemaDsl
 import org.komapper.jdbc.JdbcDatabase
@@ -13,7 +14,7 @@ fun main() {
     database.withTransaction {
 
         // (3) get an entity metamodel
-        val e = EmployeeDef.meta
+        val e = Meta.employee
 
         // (4) create schema
         database.runQuery {
