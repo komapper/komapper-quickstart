@@ -18,6 +18,9 @@ dependencies {
 }
 
 kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(11))
+    }
     sourceSets.main {
         kotlin.srcDir("build/generated/ksp/main/kotlin")
     }
