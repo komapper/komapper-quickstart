@@ -2,7 +2,6 @@ package org.komapper.quickstart
 
 import org.komapper.core.dsl.Meta
 import org.komapper.core.dsl.QueryDsl
-import org.komapper.core.dsl.SchemaDsl
 import org.komapper.jdbc.JdbcDatabase
 import org.komapper.tx.jdbc.withTransaction
 
@@ -18,7 +17,7 @@ fun main() {
 
         // (4) create schema
         database.runQuery {
-            SchemaDsl.create(e)
+            QueryDsl.create(e)
         }
 
         // (5) insert multiple employees at once
