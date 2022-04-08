@@ -1,6 +1,6 @@
 plugins {
     application
-    id("com.google.devtools.ksp") version "1.5.31-1.0.1"
+    id("com.google.devtools.ksp") version "1.6.20-1.0.5"
     kotlin("jvm") version "1.5.31"
 }
 
