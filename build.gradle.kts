@@ -1,7 +1,7 @@
 plugins {
     application
-    id("com.google.devtools.ksp") version "1.5.31-1.0.1"
-    kotlin("jvm") version "1.5.31"
+    id("com.google.devtools.ksp") version "1.6.20-1.0.5"
+    kotlin("jvm") version "1.6.20"
 }
 
 application {
@@ -9,7 +9,7 @@ application {
 }
 
 dependencies {
-    val komapperVersion = "0.31.0"
+    val komapperVersion = "0.32.0"
     implementation("org.komapper:komapper-starter-jdbc:$komapperVersion")
     implementation("org.komapper:komapper-dialect-h2-jdbc:$komapperVersion")
     ksp("org.komapper:komapper-processor:$komapperVersion")
