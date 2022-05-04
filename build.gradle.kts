@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     application
     id("com.google.devtools.ksp") version "1.6.21-1.0.5"
@@ -22,9 +24,6 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain {
-        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(11))
-    }
     sourceSets.main {
         kotlin.srcDir("build/generated/ksp/main/kotlin")
     }
@@ -38,5 +37,9 @@ repositories {
 tasks {
     withType<Test>().configureEach {
         useJUnitPlatform()
+    }
+
+    withType<KotlinCompile>().configureEach {
+        kotlinOptions.jvmTarget = "11"
     }
 }
