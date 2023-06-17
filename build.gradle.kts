@@ -11,7 +11,7 @@ application {
 }
 
 dependencies {
-    val komapperVersion = "1.10.0"
+    val komapperVersion = "1.11.0"
     platform("org.komapper:komapper-platform:$komapperVersion").let {
         implementation(it)
         ksp(it)
