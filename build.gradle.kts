@@ -20,7 +20,7 @@ dependencies {
     implementation("org.komapper:komapper-starter-jdbc")
     implementation("org.komapper:komapper-dialect-h2-jdbc")
     ksp("org.komapper:komapper-processor")
-    testImplementation(platform("org.junit:junit-bom:5.12.1"))
+    testImplementation(platform("org.junit:junit-bom:5.12.2"))
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
