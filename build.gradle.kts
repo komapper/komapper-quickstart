@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     application
     id("com.google.devtools.ksp") version "2.3.6"
-    kotlin("jvm") version "2.3.10"
+    kotlin("jvm") version "2.3.20"
 }
 
 application {
