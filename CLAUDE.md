@@ -72,11 +72,11 @@ This is a Komapper quickstart project demonstrating the Komapper ORM framework f
 
 ### Important Technical Details
 
-- **Kotlin Version**: 2.1.21
-- **Komapper Version**: 5.3.0
-- **Target JVM**: Java 11
-- **KSP**: Version 2.1.21-2.0.2 with KSP2 enabled
-- **Testing**: JUnit 5 (Jupiter)
+- **Kotlin Version**: 2.4.0
+- **Komapper Version**: 7.0.0
+- **Target JVM**: Java 17
+- **KSP**: Version 2.3.9 with KSP2 enabled
+- **Testing**: JUnit 6.1.0 (Jupiter)
 
 ### External Documentation
 For detailed Komapper documentation, refer to: https://www.komapper.org/docs/quickstart/
