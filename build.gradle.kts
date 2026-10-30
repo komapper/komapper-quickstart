@@ -4,7 +4,7 @@ import org.gradle.jvm.toolchain.JavaLanguageVersion
 
 plugins {
     application
-    id("com.google.devtools.ksp") version "2.3.12"
+    id("com.google.devtools.ksp") version "2.3.13"
     kotlin("jvm") version "2.4.21"
 }
 
